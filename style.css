@@ -1,0 +1,82 @@
+@media all {
+  body {
+    font-family: arial;
+  }
+  .photoDiv {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+  }
+  .profile_picture {
+    border-radius: 100px;
+    height: 50px;
+    width: 50px;
+    float: left;
+  }
+  .likes{
+    background: url('images/like.jpg') no-repeat;
+    padding: 0 25px;
+    margin: 10px;
+  }
+  .username {
+    font-weight: bold;
+  }
+  .name{
+    display: inline-block;
+    margin: 3px 0 0 15px;
+    font-size: 11pt;
+  }
+  .time{
+    float: right;
+    color: grey;
+  }
+  .image{
+    width: 300px;
+  }
+  .text {
+    margin: 5px 10px 20px 10px;
+    font-size: 10pt;
+  }
+}
+@media (min-width: 768px) {
+  .photoDiv {
+    width: 90%;
+    margin: 15px;
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction:column;
+    height: 300px;
+  }
+  .header {
+    height: 65px;
+    margin: 10px 10px auto;
+    order: 2;
+    flex-basis: 25%;
+    border-bottom: 1px solid #f2f2f2;
+  }
+  .comment {
+    order: 3;
+    flex-basis: 70%;
+    width: 385px;
+  }
+  .img {
+    order: 1;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    -moz-column-count: 3;
+    -moz-column-gap: 10px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 10px;
+    column-count: 3;
+    column-gap: 10px;
+  }
+  .photoDiv {
+    width: 300px;
+    margin: 15px;
+    display: inline-block;
+  }
+  .header {
+    height: 65px;
+    margin: 10px 10px auto;
+  }
+}
