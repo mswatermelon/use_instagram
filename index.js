@@ -16,6 +16,7 @@ $.ajax({
    }
 });
 
+// Преобразование времени на время, прошедшее с публикации
 function timeAgo(time){
   var date = new Date(parseInt(time) * 1000),
       diff = (((new Date()).getTime() - date.getTime()) / 1000),
@@ -32,6 +33,7 @@ function timeAgo(time){
       day_diff >= 7 && Math.ceil( day_diff / 7 ) + "w";
 }
 
+// Создаем элемент, отвечающий за один пост
 function createItem (params){
   var photoDiv = document.createElement('div'),
       header = document.createElement('div'),
@@ -78,6 +80,7 @@ function createItem (params){
   return photoDiv;
 }
 
+// Подготовка данных к созданию элементов
 function processingData(data) {
   console.log(data);
    var photoItems = data.data;
